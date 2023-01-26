@@ -2,6 +2,6 @@
 # tasks file for remote_ssh
 - name: Install VSCode Extensions
   ansible.builtin.command:
-    cmd: "code --install-extension {{ item }}"
+    cmd: "{{ vscode_cmd }} --install-extension {{ item }}"
   changed_when: true
   with_items: "{{ vscode_default_extensions }}"

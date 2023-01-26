@@ -1,0 +1,10 @@
+---
+- name: Setup Remote Dev System for current user
+  hosts: all
+  become: false
+  gather_facts: true
+  # collections:
+  # - hyperkineticnerd.vscode
+  roles:
+    - role: hyperkineticnerd.vscode.install
+    - role: hyperkineticnerd.vscode.ansible

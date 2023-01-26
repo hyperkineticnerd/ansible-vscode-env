@@ -1,7 +1,7 @@
 - name: Download VSCode Server install script
   ansible.builtin.get_url:
     url: https://aka.ms/install-vscode-server/setup.sh
-    dest: vscode-setup.sh
+    dest: ./vscode-setup.sh
     mode: 0755
 
 - name: Run install script

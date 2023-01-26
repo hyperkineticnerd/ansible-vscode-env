@@ -1,5 +1,7 @@
 ---
 # vars file for ansible
+vscode_cmd: code-server serve-local
+
 vscode_default_extensions:
   - ms-python.python
   - redhat.ansible
