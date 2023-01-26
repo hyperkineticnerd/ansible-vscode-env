@@ -1,19 +1,12 @@
 ---
-# vars file for ansible
+# vars file for python
 vscode_cmd: code-server serve-local
 
 vscode_extensions:
   - ms-python.python
-  - redhat.ansible
-  - redhat.vscode-yaml
 
 vscode_system_packages:
   - python39
-
-vscode_pip_packages:
-  - ansible==7.1.0
-  - ansible-core>2.14.0,<2.15.0
-  - ansible-lint
 
 vscode_settings_json: "/home/{{ ansible_user }}/.vscode-server/data/Machine/settings.json"
 
@@ -22,7 +15,3 @@ vscode_python_interpreter: /usr/bin/python3.9
 vscode_venv_cmd: "{{ vscode_python_interpreter }} -m venv"
 
 vscode_venv_prefix_path: ~/.venv
-
-vscode_venv_name: ansible-dev
-
-vscode_venv_script: "{{ vscode_venv_prefix_path }}/{{ vscode_venv_name }}/bin/activate"

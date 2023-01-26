@@ -1,0 +1,22 @@
+---
+# tasks file for python
+- name: Install Packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+  with_items: "{{ vscode_system_packages }}"
+  become: true
+
+- name: Install VSCode Extensions
+  ansible.builtin.command:
+    cmd: "{{ vscode_cmd }} --install-extension {{ item }}"
+  changed_when: true
+  with_items: "{{ vscode_extensions }}"
+
+- name: Setup VSCode Python Config
+  hyperkineticnerd.vscode.json_patch:
+    src: "{{ vscode_settings_json }}"
+    pretty: true
+    operations:
+      - op: add
+        path: "/python.venvPath"
+        value: "{{ vscode_venv_prefix_path }}"

@@ -6,5 +6,8 @@
   # collections:
   # - hyperkineticnerd.vscode
   roles:
-    - role: hyperkineticnerd.vscode.install
+    # - role: hyperkineticnerd.vscode.install
+    # - role: hyperkineticnerd.vscode.remote_ssh
+    # - role: hyperkineticnerd.vscode.devcontainers
+    - role: hyperkineticnerd.vscode.python
     - role: hyperkineticnerd.vscode.ansible

@@ -1,0 +1,10 @@
+---
+# tasks file for devcontainers
+- name: Install VSCode Extensions
+  ansible.builtin.command:
+    cmd: 
+      - "{{ vscode_cmd }}"
+      - "--install-extension"
+      - "{{ item }}"
+  changed_when: true
+  with_items: "{{ vscode_default_extensions }}"

@@ -1,7 +1,27 @@
 ---
 # tasks file for ansible
+- name: Install via Pip
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    # virtualenv_python: python3.9
+    virtualenv_command: "{{ vscode_venv_cmd }}"
+    virtualenv: "{{ vscode_venv_prefix_path }}/{{ vscode_venv_name }}"
+  with_items: "{{ vscode_pip_packages }}"
+
 - name: Install VSCode Extensions
   ansible.builtin.command:
     cmd: "{{ vscode_cmd }} --install-extension {{ item }}"
   changed_when: true
-  with_items: "{{ vscode_default_extensions }}"
+  with_items: "{{ vscode_extensions }}"
+
+- name: Setup VSCode Ansible Config
+  hyperkineticnerd.vscode.json_patch:
+    src: "{{ vscode_settings_json }}"
+    pretty: true
+    operations:
+      - op: add
+        path: "/ansible.python.activationScript"
+        value: "{{ vscode_venv_script }}"
+      - op: add
+        path: "/ansible.python.interpreterPath"
+        value: "{{ vscode_python_interpreter }}"

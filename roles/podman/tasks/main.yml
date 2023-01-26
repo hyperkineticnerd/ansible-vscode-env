@@ -1,0 +1,13 @@
+---
+# tasks file for podman
+# - name: Setup Remote Docker Config
+#   hyperkineticnerd.vscode.json_patch:
+#     src: ~/.vscode-server/data/Machine/settings.json
+#     pretty: true
+#     operations:
+#       - op: add
+#         path: "/docker.dockerPath"
+#         value: "podman"
+#       - op: add
+#         path: "/docker.environment/DOCKER_HOST"
+#         value: "unix:///run/user/$(id -u)/podman/podman.sock"
