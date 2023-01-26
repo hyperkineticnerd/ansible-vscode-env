@@ -1,0 +1,33 @@
+{
+    "name": "Ansible",
+    // "build": {
+    //     "dockerfile": "Containerfile"
+    // },
+    "image": "registry.redhat.io/ansible-automation-platform-23/ee-supported-rhel8:latest",
+    // "image": "quay.io/ansible/creator-ee:latest",
+    // "postCreateCommand": "ansible --version",
+    "features": {
+        // "ghcr.io/devcontainers/features/aws-cli:1": {},
+        // "ghcr.io/devcontainers/features/azure-cli:1": {},
+        // "ghcr.io/devcontainers/features/github-cli:1": {},
+        // "ghcr.io/devcontainers/features/go:1": {},
+        // ghcr.io/devcontainers/features/kubectl-helm-minikube:1
+        // ghcr.io/devcontainers/features/python:1
+        // ghcr.io/devcontainers/features/terraform:1	
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // "ansible.python.activationScript": "~/.venv/ansible-dev/bin/activate",
+                // "ansible.python.interpreterPath": "python3",
+                // "docker.dockerPath": "podman",
+                // "python.venvPath": ""
+            },
+            "extensions": [
+                "ms-python.python",
+                "redhat.ansible",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
+}

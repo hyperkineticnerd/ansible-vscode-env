@@ -1,2 +1,3 @@
-# ansible-vscode-env
-Ansible Collection to configure VS Code for Ansible Development
+# Ansible Collection - hyperkineticnerd.vscode
+
+Documentation for the collection.

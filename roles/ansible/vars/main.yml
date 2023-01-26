@@ -1,0 +1,6 @@
+---
+# vars file for ansible
+vscode_default_extensions:
+  - ms-python.python
+  - redhat.ansible
+  - redhat.vscode-yaml

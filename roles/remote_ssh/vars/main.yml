@@ -1,0 +1,6 @@
+---
+# vars file for remote_ssh
+vscode_default_extensions:
+  - ms-vscode.remote-explorer
+  - ms-vscode-remote.remote-ssh
+  - ms-vscode-remote.remote-ssh-edit
