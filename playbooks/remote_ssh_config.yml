@@ -41,7 +41,7 @@
 
     # - name: Setup Remote Docker Config
     #   hyperkineticnerd.vscode.json_patch:
-    #     src: /home/snelson/.vscode-server/data/Machine/settings.json
+    #     src: ~/.vscode-server/data/Machine/settings.json
     #     pretty: true
     #     operations:
     #       - op: add
@@ -49,11 +49,11 @@
     #         value: "podman"
     #       - op: add
     #         path: "/docker.environment/DOCKER_HOST"
-    #         value: "unix:///run/user/1000/podman/podman.sock"
+    #         value: "unix:///run/user/$(id -u)/podman/podman.sock"
 
     - name: Setup Python Config
       hyperkineticnerd.vscode.json_patch:
-        src: /home/snelson/.vscode-server/data/Machine/settings.json
+        src: ~/.vscode-server/data/Machine/settings.json
         pretty: true
         operations:
           - op: add
@@ -62,7 +62,7 @@
 
     - name: Setup Ansible Config
       hyperkineticnerd.vscode.json_patch:
-        src: /home/snelson/.vscode-server/data/Machine/settings.json
+        src: ~/.vscode-server/data/Machine/settings.json
         pretty: true
         operations:
           - op: add
