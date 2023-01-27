@@ -1,0 +1,7 @@
+---
+# tasks file for vscode_install
+- name: Install VSCode
+  community.general.flatpak:
+    name: com.visualstudio.code
+    state: present
+    # method: user

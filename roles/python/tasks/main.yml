@@ -15,8 +15,12 @@
 - name: Setup VSCode Python Config
   hyperkineticnerd.vscode.json_patch:
     src: "{{ vscode_settings_json }}"
+    dest: "{{ vscode_settings_json }}"
     pretty: true
+    create: true
     operations:
       - op: add
         path: "/python.venvPath"
         value: "{{ vscode_venv_prefix_path }}"
+  ignore_errors: true
+  # when: ansible_connection != 'local'

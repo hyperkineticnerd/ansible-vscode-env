@@ -8,3 +8,10 @@
   ansible.builtin.command:
     cmd: ./vscode-setup.sh
   changed_when: true
+
+# - name: Add alias from vscode-server to code
+#   ansible.builtin.lineinfile:
+#     path: ~/.bashrc
+#     line: "alias code='code-server serve-local'"
+#     regexp: ^alias code='code-server serve-local'$
+#     state: present

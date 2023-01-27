@@ -8,7 +8,7 @@ vscode_extensions:
 vscode_system_packages:
   - python39
 
-vscode_settings_json: "/home/{{ ansible_user }}/.vscode-server/data/Machine/settings.json"
+vscode_settings_json: ~/.vscode-server/data/Machine/settings.json
 
 vscode_python_interpreter: /usr/bin/python3.9
 

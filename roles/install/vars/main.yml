@@ -1,0 +1,4 @@
+---
+# vars file for vscode_install
+# vscode_install_method: FlatPak
+vscode_install_method: dnf

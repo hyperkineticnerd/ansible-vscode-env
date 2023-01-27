@@ -15,7 +15,7 @@ vscode_pip_packages:
   - ansible-core>2.14.0,<2.15.0
   - ansible-lint
 
-vscode_settings_json: "/home/{{ ansible_user }}/.vscode-server/data/Machine/settings.json"
+vscode_settings_json: ~/.vscode-server/data/Machine/settings.json
 
 vscode_python_interpreter: /usr/bin/python3.9
 

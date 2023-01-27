@@ -1,0 +1,26 @@
+---
+# tasks file for vscode_install
+- name: Install Yum Repo Key
+  ansible.builtin.rpm_key:
+    key: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+  become: true
+
+- name: Install Yum Repo
+  ansible.builtin.copy:
+    dest: /etc/yum.repos.d/vscode.repo
+    content: |
+      [code]
+      name=Visual Studio Code
+      baseurl=https://packages.microsoft.com/yumrepos/vscode
+      enabled=1
+      gpgcheck=1
+      gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+  become: true
+
+# dnf check-update
+
+- name: Install VSCode
+  ansible.builtin.package:
+    name: code
+  become: true

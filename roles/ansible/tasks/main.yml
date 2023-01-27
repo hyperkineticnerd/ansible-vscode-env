@@ -18,6 +18,7 @@
   hyperkineticnerd.vscode.json_patch:
     src: "{{ vscode_settings_json }}"
     pretty: true
+    create: true
     operations:
       - op: add
         path: "/ansible.python.activationScript"
@@ -25,3 +26,5 @@
       - op: add
         path: "/ansible.python.interpreterPath"
         value: "{{ vscode_python_interpreter }}"
+  ignore_errors: true
+  # when: ansible_connection != 'local'
