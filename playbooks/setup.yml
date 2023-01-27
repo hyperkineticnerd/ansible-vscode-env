@@ -8,13 +8,14 @@
   roles:
     # - role: hyperkineticnerd.vscode.install
     #   vscode_install_method: FlatPak
+    #   when: ansible_connection == 'local'
 
     # - role: hyperkineticnerd.vscode.remote_ssh
 
     # - role: hyperkineticnerd.vscode.devcontainers
 
-    - role: hyperkineticnerd.vscode.server_install
-      when: ansible_connection != 'local'
+    # - role: hyperkineticnerd.vscode.server_install
+    #   when: ansible_connection != 'local'
 
     - role: hyperkineticnerd.vscode.python
       # vscode_cmd: code
