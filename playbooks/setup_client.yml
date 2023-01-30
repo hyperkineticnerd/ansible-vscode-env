@@ -1,0 +1,13 @@
+---
+- name: Setup Local Dev System for current user
+  hosts: localhost
+  become: false
+  gather_facts: true
+  roles:
+    ## Client Side
+    - role: hyperkineticnerd.vscode.install
+    #   vscode_install_method: FlatPak
+
+    - role: hyperkineticnerd.vscode.remote_ssh
+
+    - role: hyperkineticnerd.vscode.devcontainers

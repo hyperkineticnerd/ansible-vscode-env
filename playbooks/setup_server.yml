@@ -1,0 +1,14 @@
+---
+- name: Setup Remote Dev System for current user
+  hosts: all
+  become: false
+  gather_facts: true
+  roles:
+    ## Server Side
+    - role: hyperkineticnerd.vscode.server_install
+
+    - role: hyperkineticnerd.vscode.python
+      # vscode_cmd: code
+
+    - role: hyperkineticnerd.vscode.ansible
+      # vscode_cmd: code
